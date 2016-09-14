@@ -3,7 +3,7 @@ Basic aplication of JAVA RMI
 
 ## Running
 <code> 
- $cd /[folder project]/build/classes <br>
+ $cd /[folder project]/build/classes </br>
  $rmic servidor.Implementacao
  $rmiregistry
  run Run.java
