@@ -2,8 +2,10 @@
 Basic aplication of JAVA RMI
 
 ## Running
-+ print_r($cd /[folder project]/build/classes)
-+ print_r($rmic servidor.Implementacao)
-+ print_r($rmiregistry)
+<code>
++ $cd /[folder project]/build/classes
++ $rmic servidor.Implementacao
++ $rmiregistry
 + run Run.java
 + run App.java
++ </code>
