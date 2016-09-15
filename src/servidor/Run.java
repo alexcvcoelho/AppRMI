@@ -23,5 +23,5 @@ public class Run {
         Naming.rebind("//localhost/rmi", impl);
         System.out.println("Server running...");
     }
-    
+
 }

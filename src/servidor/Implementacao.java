@@ -22,8 +22,22 @@ public class Implementacao extends UnicastRemoteObject implements Interface {
     }
 
     @Override
-    public String hello(String name) throws RemoteException {
-        return "Ola, " + name;
+    public float soma(float n1, float n2) throws RemoteException {
+        return n1 + n2;
     }
 
+    @Override
+    public float subtracao(float n1, float n2) throws RemoteException {
+        return n1 - n2;
+    }
+
+    @Override
+    public float divisao(float n1, float n2) throws RemoteException {
+        return n1 / n2;
+    }
+
+    @Override
+    public float multiplicacao(float n1, float n2) throws RemoteException {
+        return n1 * n2;
+    }
 }

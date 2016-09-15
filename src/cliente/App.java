@@ -40,15 +40,58 @@ public class App extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtName = new javax.swing.JTextField();
-        btnRemoto = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        n1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        n2 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        result = new javax.swing.JTextPane();
+        jLabel4 = new javax.swing.JLabel();
+        soma = new javax.swing.JButton();
+        subtracao = new javax.swing.JButton();
+        multiplicacao = new javax.swing.JButton();
+        divisao = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        btnRemoto.setText("Remoto");
-        btnRemoto.addActionListener(new java.awt.event.ActionListener() {
+        jLabel1.setFont(new java.awt.Font("DejaVu Sans", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Calculadora");
+
+        jLabel2.setText("N1");
+
+        jLabel3.setText("N2");
+
+        jScrollPane1.setViewportView(result);
+
+        jLabel4.setText("Resultado");
+
+        soma.setText("+");
+        soma.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRemotoActionPerformed(evt);
+                somaActionPerformed(evt);
+            }
+        });
+
+        subtracao.setText("-");
+        subtracao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subtracaoActionPerformed(evt);
+            }
+        });
+
+        multiplicacao.setText("*");
+        multiplicacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplicacaoActionPerformed(evt);
+            }
+        });
+
+        divisao.setText("/");
+        divisao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divisaoActionPerformed(evt);
             }
         });
 
@@ -57,33 +100,102 @@ public class App extends javax.swing.JDialog {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnRemoto)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(n1, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(soma)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(subtracao))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(n2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(divisao)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(multiplicacao))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnRemoto))
-                .addContainerGap(247, Short.MAX_VALUE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(soma)
+                    .addComponent(subtracao))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(n2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(multiplicacao)
+                    .addComponent(divisao))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnRemotoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRemotoActionPerformed
-        try {
-            String txt = txtName.getText();
-            JOptionPane.showMessageDialog(null, impl.hello(txt));
+    private void somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_somaActionPerformed
+           try {    
+                    float num1 = Float.parseFloat(n1.getText());
+                    float num2 = Float.parseFloat(n2.getText());
+                    result.setText(String.valueOf(impl.soma(num1, num2)));
         } catch (RemoteException ex) {
             Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_btnRemotoActionPerformed
+    }//GEN-LAST:event_somaActionPerformed
+
+    private void subtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtracaoActionPerformed
+        try {    
+                    float num1 = Float.parseFloat(n1.getText());
+                    float num2 = Float.parseFloat(n2.getText());
+                    result.setText(String.valueOf(impl.subtracao(num1, num2)));
+        } catch (RemoteException ex) {
+            Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_subtracaoActionPerformed
+
+    private void divisaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisaoActionPerformed
+        try {    
+                    float num1 = Float.parseFloat(n1.getText());
+                    float num2 = Float.parseFloat(n2.getText());
+                    result.setText(String.valueOf(impl.divisao(num1, num2)));
+        } catch (RemoteException ex) {
+            Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_divisaoActionPerformed
+
+    private void multiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicacaoActionPerformed
+        try {    
+                    float num1 = Float.parseFloat(n1.getText());
+                    float num2 = Float.parseFloat(n2.getText());
+                    result.setText(String.valueOf(impl.multiplicacao(num1, num2)));
+        } catch (RemoteException ex) {
+            Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_multiplicacaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,7 +251,17 @@ public class App extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnRemoto;
-    private javax.swing.JTextField txtName;
+    private javax.swing.JButton divisao;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton multiplicacao;
+    private javax.swing.JTextField n1;
+    private javax.swing.JTextField n2;
+    private javax.swing.JTextPane result;
+    private javax.swing.JButton soma;
+    private javax.swing.JButton subtracao;
     // End of variables declaration//GEN-END:variables
 }
