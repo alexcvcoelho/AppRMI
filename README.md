@@ -9,3 +9,9 @@ Basic aplication of JAVA RMI
 + run Run.java
 + run App.java 
 
+## Group
+
+- Alex Covolan Vieira Coelho    132115
+- Bianca Costa Coerrea          132117
+- Felipe Bergamo Gonçalves      130167 
+
